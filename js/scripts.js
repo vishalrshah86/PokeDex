@@ -1,19 +1,28 @@
+let pokemonRepository = (function() {
+//added IIFE function
 let pokemonList = [
  {name: "Clefable", height: 1, types: ['grass','speed']},
  {name: 'Pikachu', height: 1.5, types: ['water','speed']},
- {name: 'Sandshrew', height: 2.3, types: ['ice','speed']}
+ {name: 'Sandshrew', height: 2.3, types: ['ice','speed']},
+ {name: 'Bulbasaur', height: 0.7, types: ['grass','poison']},
+ {name: 'Charizard', height: 1.7, types: ['fire','flying']}
 ];
 
-for (let i = 0; i < pokemonList.length; i++) {
-    // write the Pokémon name on your website’s DOM.
-  document.write(pokemonList[i].name +  "(height:" + pokemonList[i].height + ")");
+function getAll() {
+   return pokemonList;
+}
 
-  //Checking if pokemon height is greater than 1.5 m
-if (pokemonList[i].height > 1.5) {
- //if pokemon height is greater than 1.6 m, writes "Wow that's big!"
-  document.write(" - Wow, that's big!");
-  }
+function add(pokemon) {
+  pokemonList.push(pokemon);
+}
 
- //Adding linebreaks after each pokemon name
-  document.write("<br><br>");
-  }
+return {
+  getAll: getAll,
+  add: add,
+  addListItem: addListItem
+};
+})();
+
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon)
+});
