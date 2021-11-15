@@ -29,10 +29,16 @@ let pokemonRepository = (function() {
      });
     }
 
+
+    function showDetails(pokemon){
+          console.log(pokemon);
+    }
+
     return {
       getAll: getAll,
       add: add,
       addListItem: addListItem,
+      showDetails: showDetails
     };
 
 })();
