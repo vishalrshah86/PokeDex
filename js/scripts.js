@@ -1,7 +1,22 @@
 let pokemonRepository = (function() {
 //added IIFE function
     let pokemonList = [];
-    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+    let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20';
+
+
+
+    function add(pokemon) {
+        if (typeof pokemon === 'object') {
+          pokemonList.push(pokemon);
+        }
+      }
+
+
+
+    function getAll() {
+        return pokemonList;
+      }
+
 
 
     function addListItem(pokemon) {
@@ -17,23 +32,6 @@ let pokemonRepository = (function() {
      });
     }
 
-
-    function showDetails(pokemon){
-      loadDetails(pokemon).then(function () {
-        console.log(pokemon);
-      });
-    }
-
-    function add(pokemon) {
-        if (typeof pokemon === 'object') {
-          pokemonList.push(pokemon);
-        }
-      }
-
-
-      function getAll() {
-        return pokemonList;
-      }
 
 
     function loadList() {
@@ -68,9 +66,11 @@ let pokemonRepository = (function() {
 
 
 
-    function add(pokemon) {
-      pokemonList.push(pokemon);
-    }
+     function showDetails(pokemon){
+       loadDetails(pokemon).then(function () {
+         console.log(pokemon);
+       });
+     }
 
 
     return {
