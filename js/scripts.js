@@ -74,6 +74,43 @@ let pokemonRepository = (function() {
      }
 
 
+     function showModal(pokemon) {
+         let modalBody = $('.modal-body');
+         let modalTitle = $('.modal-title');
+         modalTitle.empty();
+         modalBody.empty();
+
+
+
+     //Create a name element to display in the console
+       let nameElement = $('<h1 class="text-capitalize">' + pokemon.name + '</h1>');
+       // Image element
+       let imageElement = $('<img class="modal-img" src="" >');
+       imageElement.attr('src', pokemon.imageUrl);
+       // Height and Types
+       let heightElement = $('<p>' + 'height: ' + pokemon.height + '</p>');
+       let typesElement = $('<p>' + 'types: ' + pokemon.types + '</p>');
+
+
+         modalTitle.append(nameElement);
+         modalBody.append(imageElement);
+         modalBody.append(heightElement);
+         modalBody.append(typesElement);
+
+         $('#pokedex').modal();
+         }
+
+
+       fetch('https://pokeapi.co/api/v2/pokemon/').then(function (response) {
+       return response.json();
+     }).then(function (pokemonList) {
+       console.log(pokemonList);
+     }).catch(function () {
+     });
+
+
+
+
     return {
       add: add,
       getAll: getAll,
