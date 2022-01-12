@@ -2,7 +2,7 @@ let pokemonRepository = (function() {
   //added IIFE function
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20';
-
+  let modalContainer = document.querySelector('#modal-container');
 
 
   function add(pokemon) {
