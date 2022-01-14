@@ -7,14 +7,23 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <h1>pokedex</h1>
-  <ul class='pokemon-list'></ul>
+  <h1>Pokedex</h1>
+  <div class="list-ontainer">
+    <ul class="pokemon-list"></ul>
+  </div>
 
-  <button id='show-modal'>Show modal</button>
-  <div id='modal-container'>
-    <div class="modal-title">
+
+
+  <button id="modalBtn" class="button">Click Here</button>
+
+  <div id="simpleModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="closeBtn">&times;</span>
+        <h2>Modal Header</h2>
+      </div>
       <div class="modal-body">
-        <button class='modal-close'>Close</button>
+        <p>Hello....I am Modal</p>
       </div>
     </div>
   </div>
