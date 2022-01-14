@@ -2,7 +2,7 @@ let pokemonRepository = (function() {
   //added IIFE function
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=20';
-  let modalContainer = document.querySelector('#modal-container');
+  
 
 
   function add(pokemon) {
@@ -78,11 +78,11 @@ function showDetails(pokemon){
 
   function showModal (pokemon) {
 // Get modal createElement
-var modal = document.getElementById('simpleModal');
+let modal = document.getElementById('simpleModal');
 // Get open modal closeButtonElement
-var modalBtn = document.getElementById('modalBtn');
+let modalBtn = document.getElementById('modalBtn');
 // Get close closeButton
-var closeBtn = document.getElementByClassName('closeBtn')[0];
+let closeBtn = document.getElementByClassName('closeBtn')[0];
 
 
 // Listen for open Click
@@ -108,7 +108,7 @@ function outsideClick(){
     modal.style.display = 'none';
   }
 }
-}
+
 
 
 
