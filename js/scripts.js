@@ -31,7 +31,7 @@ let pokemonRepository = (function() {
     loadDetails(pokemon).then(function () {
       let imageDiv = document.createElement('div');
       let pokemonImage = document.createElement('img');
-      pokemonImage.src = pokemon.imageURL;
+      pokemonImage.src = pokemon.imageUrl;
       pokemonImage.classList.add('pokemon-image');
 
       imageDiv.appendChild(pokemonImage);
@@ -112,7 +112,7 @@ let pokemonRepository = (function() {
 
     let pokemonImage = document.createElement('img');
     pokemonImage.classList.add('pokemon-modal-image');
-    pokemonImage.src = pokemon.imageURL;
+    pokemonImage.src = pokemon.imageUrl;
 
     modal.appendChild(closeButtonElement);
     modal.appendChild(pokemonName);
