@@ -53,7 +53,7 @@ let pokemonRepository = (function() {
       json.results.forEach(function (item) {
         let pokemon = {
           name: item.name,
-          detailsUrl: item.url
+          detailsUrl: item.Url
         };
         add(pokemon);
         console.log(pokemon);
@@ -65,8 +65,8 @@ let pokemonRepository = (function() {
 
 
   function loadDetails(item) {
-    let url = item.detailsUrl;
-    return fetch(url).then(function(response) {
+    let Url = item.detailsUrl;
+    return fetch(Url).then(function(response) {
       return response.json();
     }).then(function (details) {
       item.imageUrl = details.sprites.front_default;
