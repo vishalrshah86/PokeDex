@@ -103,7 +103,6 @@ let pokemonRepository = (function() {
     pokemonName.innerText = pokemon.name;
 
     let pokemonType = document.createElement('p');
-    pokemonType.innerText = 'Type(s): ' + pokemon.types;
     pokemonType.innerText = 'Type(s): ' + pokemon.types.map((x) => x.type.name).join(', ');
 
     let pokemonHeight = document.createElement('p');
