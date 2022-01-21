@@ -2,7 +2,7 @@ let pokemonRepository = (function () {
   //added IIFE function
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-  let modalContainer = document.querySelector('#modal-container');
+  //let modalContainer = document.querySelector('#modal-container');
 
 
   function add(pokemon) {
@@ -80,7 +80,7 @@ let pokemonRepository = (function () {
     });
   }
 
-  function showModal(pokemon) {
+  /*function showModal(pokemon) {
     let modalContainer = document.querySelector('#modal-container');
 
     modalContainer.innerHTML = '';
@@ -139,7 +139,7 @@ let pokemonRepository = (function () {
       hideModal();
     }
   });
-
+*/
 
   return {
     add: add,
@@ -148,8 +148,8 @@ let pokemonRepository = (function () {
     loadList: loadList,
     loadDetails: loadDetails,
     showDetails: showDetails,
-    showModal: showModal,
-    hideModal: hideModal,
+  //  showModal: showModal,
+  //  hideModal: hideModal,
   };
 })();
 
