@@ -21,9 +21,15 @@ let pokemonRepository = (function () {
     let listpokemon = document.createElement("li");
     let button = document.createElement("button");
 
-    listpokemon.classList.add('listItem-class');
+    listpokemon.addClass('listItem-class');
+    button.innerText = pokemon.name;
+    button.addClass('button-class');
+
+
+    /*listpokemon.classList.add('listItem-class');
     button.innerText = pokemon.name;
     button.classList.add('button-class');
+    */
 
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
@@ -93,7 +99,7 @@ let pokemonRepository = (function () {
     modalBody.empty();
 
 
-    let pokemonName = document.createElement('h1');
+    /*let pokemonName = document.createElement('h1');
     pokemonName.innerText = pokemon.name;
 
     let pokemonType = document.createElement('p');
@@ -112,9 +118,9 @@ let pokemonRepository = (function () {
     modal.appendChild(pokemonType);
     modal.appendChild(pokemonHeight);
     modal.appendChild(pokemonImage);
+    */
 
-
-    /*let nameElement = $("<h1>" + pokemon.name + "</h1>");
+    let nameElement = $("<h1>" + pokemon.name + "</h1>");
     let imageElementFront = $('<img class="modal-img" style="width:75%">');
     imageElementFront.attr("src", pokemon.imageUrlFront);
     let imageElementBack = $('<img class="modal-img" style="width:75%">');
@@ -128,7 +134,7 @@ let pokemonRepository = (function () {
     modalBody.append(imageElementBack);
     modalBody.append(heightElement);
     modalBody.append(typesElement);
-    */
+
 
   }
 
