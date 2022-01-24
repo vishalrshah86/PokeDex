@@ -36,8 +36,57 @@ h1 {
   display: inline;
 }
 
+.button-class {
+  border: none;
+  color: #debe9e;
+  text-align: center;
+  text-decoration: none;
+  margin: 8px 8px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: #1f1342;
+  color: #debe9e;
+  border: none;
+  width: 200px;
+  height: 200px;
+  text-transform: capitalize;
+  border-radius: 2%;
+}
+
+.button-class:hover {
+  opacity: 0.8;
+}
+
+#search-pokemon {
+  background-color: #F7ECE1;
+  border-color: #725AC1;
+  transition: transform 0.4s;
+}
+
+#search-pokemon:hover {
+  transform: scale(1.1);
+  transition: transform 0.4s;
+}
 
 
+.form-control::placeholder {
+  color: #725AC1;
+}
+
+.navbar-brand {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.navbar-light .navbar-brand {
+  color: #725AC1;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: #725AC1;
+  opacity: 0.8;
+}
 
 
 .pokemon-image {
@@ -119,4 +168,9 @@ h1 {
 #modal-container.is-visible {
   /* CSS for modal container - add your own desired CSS styles here */
   display: block;
+}
+
+
+.navbar.custom {
+  background-color: #F7ECE1;
 }
