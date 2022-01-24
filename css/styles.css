@@ -36,26 +36,8 @@ h1 {
   display: inline;
 }
 
-.button-class {
-  border: none;
-  color: #debe9e;
-  text-align: center;
-  text-decoration: none;
-  margin: 8px 8px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-  background-color: #1f1342;
-  color: #debe9e;
-  border: none;
-  width: 200px;
-  height: 200px;
 
-}
 
-.button-class:hover {
-  opacity: 0.8;
-}
 
 
 .pokemon-image {
