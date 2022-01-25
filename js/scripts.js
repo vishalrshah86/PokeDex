@@ -166,7 +166,7 @@ function loadList() {
 
 
 function loadDetails(item) {
-  let url = item.detailsUrl;
+  let Url = item.detailsUrl;
   return fetch(Url).then(function (response) {
     return response.json();
   }).then(function (details) {
