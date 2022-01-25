@@ -165,7 +165,7 @@ function loadList() {
 }
 
 
-function loadDetails(pokemonList) {
+function loadDetails(item) {
   let Url = item.detailsUrl;
   return fetch(Url).then(function (response) {
     return response.json();
