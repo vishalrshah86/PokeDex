@@ -21,7 +21,7 @@ let pokemonRepository = (function () {
   function addListItem(pokemon) {
     loadDetails(pokemon).then(function() {
       let pokemonList = document.querySelector(".pokemon-list");
-      let listpokemon = document.createElement("li");
+      let pokemonList = document.createElement("li");
       let button = document.createElement("button");
       let pokemonImage = document.createElement("img");
       pokemonImage.setAttribute("alt", "A pokemon picture");
@@ -32,10 +32,10 @@ let pokemonRepository = (function () {
 
       button.innerText = pokemon.name;
       button.classList.add("tab", "btn", "btn-seconday");
-      listItem.classList.add("group-list-item");
-      listItem.appendChild(button);
+      pokemonList.classList.add("group-list-item");
+      pokemonList.appendChild(button);
       button.appendChild(pokemonImage);
-      pokeList.appendChild(listItem);
+      pokemonList.appendChild(listItem);
 
 
       button.addEventListener('click', function () {
@@ -165,7 +165,7 @@ function loadList() {
 }
 
 
-function loadDetails(item) {
+function loadDetails(pokemonList) {
   let Url = item.detailsUrl;
   return fetch(Url).then(function (response) {
     return response.json();
