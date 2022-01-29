@@ -65,7 +65,7 @@ let pokemonRepository = (function () {
 
 
     let pokemonName = $("<h1>" + pokemonName + "</h1>");
-    let pokemonImage = $("<img class="modal-img" style="width:50%">");
+    let pokemonImage = $('<img class="modal-img" style="width:50%">');
     pokemonImage.attr("src", pokemon.imageUrl);
     let pokemonHeight = $("<p>" + "height : " + pokemon.height + "</p>");
     let pokemonType = document.createElement("p");
