@@ -47,13 +47,11 @@ let pokemonRepository = (function () {
   }
 
 
-
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
       showModal(pokemon);
     });
   }
-
 
 
   // modal using bootstrap
@@ -62,15 +60,13 @@ let pokemonRepository = (function () {
     let modalTitle = $(".modal-title");
     //let modalHeader = $(".modal-header");
 
-
-    modalBody.empty();
     modalTitle.empty();
+    modalBody.empty();
+
 
     let pokemonName = $("<h1>" + pokemonName + "</h1>");
-    let pokemonImageFront = $('<img class="modal-img" style="width:50%">');
-    pokemonImageFront.attr("src", pokemon.imageUrlFront);
-    let pokemonImageBack = $('<img class="modal-img" style="width:50%">');
-    pokemonImageBack.attr("src", pokemon.imageUrlBack);
+    let pokemonImage = $("<img class="modal-img" style="width:50%">");
+    pokemonImage.attr("src", pokemon.imageUrl);
     let pokemonHeight = $("<p>" + "height : " + pokemon.height + "</p>");
     let pokemonType = document.createElement("p");
     let typesCon = ''
@@ -181,8 +177,8 @@ function loadList() {
 
 
 function loadDetails(item) {
-  let Url = item.detailsUrl;
-  return fetch(Url).then(function (response) {
+  let url = item.detailsUrl;
+  return fetch(url).then(function (response) {
     return response.json();
   }).then(function (details) {
     item.imageUrl = details.sprites.front_default;
