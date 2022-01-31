@@ -98,11 +98,11 @@ h1 {
 }
 
 .navbar-light .navbar-brand {
-  color: #725AC1;
+  color: #debe9e;
 }
 
 .navbar-light .navbar-brand:hover {
-  color: #725AC1;
+  color: #ffc107;
   opacity: 0.8;
 }
 
