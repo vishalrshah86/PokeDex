@@ -27,10 +27,8 @@ let pokemonRepository = (function () {
     pokemonList.append(listItem);
 
     loadDetails(pokemon).then(function () {
-      let imageDiv = $('div');
-      let pokemonImage = $('img');
-      pokemonImage.src = pokemon.imageUrl;
-      pokemonImage.classList.add('pokemon-image');
+      let imageDiv = $('<div></div>');
+      let pokemonImage = $('<img>${pokemon.imageUrl}</img>');
 
       imageDiv.append(pokemonImage);
       button.append(imageDiv);
