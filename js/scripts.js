@@ -20,8 +20,8 @@ let pokemonRepository = (function () {
 
   function addListItem(pokemon) {
     let pokemonList = $(".pokemon-list");
-    let listItem = $("<li class= 'listItem-class'></li>");
-    let button = $("<button class= 'button-class'>${pokemon.name}</button>");
+    let listItem = $("<li class='listItem-class'></li>");
+    let button = $("<button class='button-class'>${pokemon.name}</button>");
 
     listItem.append(button);
     pokemonList.append(listItem);
